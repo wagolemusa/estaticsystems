@@ -2,7 +2,87 @@
 {% block content %}
 
 
-<h1>Refuge wise</h1>
+<section>
+    <div id="slider-animation-2" class="carousel slide" data-ride="carousel">
 
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#slider-animation-2" data-slide-to="0" class="active"></li>
+    <li data-target="#slider-animation-2" data-slide-to="1"></li>
+    <li data-target="#slider-animation-2" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../static/web2.jpg" alt="Estatix">
+        <div class="text-box">
+            <div class="align-items-center">
+            <div class="col-md-6">
+              <h2 class="wow fadeInUp" data-wow-duration="4s">Mugs Printing</h2>
+              <br/>
+            <p class="wow fadeInUp" data-wow-duration="2s">Magic Mugs, White Mugs, Glow in the Dark Mugs, Enamel Mugs<br/>
+            Frosted Class Mugs, Beer Mugs</p>
+            </div>
+      <!--       <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
+               <img src="https://marutiprodcdn.azureedge.net/-/media/images/maruti/marutisuzuki/car/car-profile-shots/full-range-side-shot.ashx?modified=20181217042135&h=342&w=500&la=en&hash=821C3E5E1634D214529113B55002D04E7826D57F">
+            </div> -->
+        </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../static/w.jpg" alt="Estatix">
+    <div class="text-box">
+            <div class="row align-items-center">
+            <div class="col-md-6  wow slideInRight" data-wow-duration="4s">
+                <h2>Digital & Offset Printing Product</h2>
+            <p>Brochures, Poster, Newsletters, Certifficates, Handouts</p>
+            </div>
+            <div class="col-md-6  wow slideInLeft" data-wow-duration="4s">
+               <img src="../static/de.png">
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../static/web1.jpg" alt="Estatix">
+    <div class="text-box">
+      <div class="row align-items-center">
+          <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
+            <h2>Photography and Vidio Production</h2>
+            <p>Co-oprate Events, Landspace Photography<br/>
+            Medical Camps</p>
+            </div>
+            <div class="col-md-6  wow fadeInUp" data-wow-duration="4s">
+            <!--    <img src="https://marutiprodcdn.azureedge.net/-/media/images/maruti/marutisuzuki/car/car-profile-shots/full-range-side-shot.ashx?modified=20181217042135&h=342&w=500&la=en&hash=821C3E5E1634D214529113B55002D04E7826D57F"> -->
+            </div>
+        </div>
+            
+        </div>
+    </div>
+  </div>
+
+
+
+</div>
+    
+</section>
+<script type="text/javascript">
+	   wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+</script>
 
 {% endblock content %}
