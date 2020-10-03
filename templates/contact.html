@@ -1,8 +1,126 @@
 {% extends "base.html" %}
+
 {% block content %}
 
+<div class="container-fluid" style="padding-top: 4em;">
+<!-- Section: Contact v.1 -->
+<section class="my-5">
+  <!-- Grid row -->
+  <div class="row">
 
-<h1>Refuge wise</h1>
+    <!-- Grid column -->
+    <div class="col-lg-5 mb-lg-0 mb-4">
 
+      <!-- Form with header -->
+      <div class="card">
+        <form method="POST" class="card-body">
+					{% csrf_token %}          
+					<!-- Header -->
+          <div class="form-header">
+            <h3 class="mt-2"><i class="fas fa-envelope"></i> Write to us:</h3>
+          </div>
+          <p class="dark-grey-text">We'll write rarely, but only the best content.</p>
+          <!-- Body -->
+          <div class="md-form">
+            <i class="fas fa-user prefix grey-text"></i>
+            <!-- <input type="text" id="form-name" class="form-control"> -->
+            {{ form.full_name }}
+            <label for="form-name">Your name</label>
+          </div>
+           <div class="md-form">
+            <i class="fas fa-mobile-alt prefix grey-text"></i>
+            <!-- <input type="text" id="phone-number" class="form-control"> -->
+            {{ form.phone }}
+            <label for="form-name">Your phone</label>
+          </div>
+          <div class="md-form">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <!-- <input type="text" id="form-email" class="form-control"> -->
+            {{ form.email }}
+            <label for="form-email">Your email</label>
+          </div>
+          <div class="md-form">
+            <i class="fas fa-tag prefix grey-text"></i>
+            <!-- <input type="text" id="form-Subject" class="form-control"> -->
+            {{ form.subject }}
+            <label for="form-Subject">Subject</label>
+          </div>
+          <div class="md-form">
+            <i class="fas fa-pencil-alt prefix grey-text"></i>
+            <!-- <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea> -->
+            {{ form.message }}
+            <label for="form-text">Send message</label>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-light-blue" type="submit">Send Message</button>
+          </div>
+          </form>
+      </div>
+      <!-- Form with header -->
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-7">
+  <div class="row text-center">
+        <div class="col-md-4">
+          <a class="btn-floating">
+            <i class="fas fa-map-marker-alt"></i>
+          </a>
+          <p>P.O. Box 17011 - 40100</p>
+          <p class="mb-md-0">Apindi Phase 1, Garisa Lodge</p>
+        </div>
+        <div class="col-md-4">
+          <a class="btn-floating">
+            <i class="fas fa-phone"></i>
+          </a>
+          <p>+254723112843</p>
+          <p class="mb-md-0">Mon - Fri, 8:00-6:00</p>
+        </div>
+        <div class="col-md-4">
+          <a class="btn-floating">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <p>info@estatixsystems.co.ke</p>
+          <p class="mb-0">estatixsystems@gmail.com</p>
+        </div>
+      </div>
+      <br><br>
+      <!--Google map-->
+      <div id="map-container-section" class="z-depth-1-half map-container-section mb-4" style="height: 590px">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8122694849258!2d34.752406149893915!3d-0.09978599992682181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb019cc69f5d3db58!2sEstatix%20Systems!5e0!3m2!1sen!2ske!4v1598781827530!5m2!1sen!2ske" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!-- <iframe src="https://maps.google.com/maps?q=Manhatan&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" -->
+          <!-- style="border:0" allowfullscreen></iframe> -->
+      </div>
+      <!-- Buttons-->
+    
+
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+</section>
+<!-- Section: Contact v.1 -->
+
+</div>
+
+
+<section class="subscribe-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+      <h3>ASSURING YOU OF OUR BEST SERVICE ALWAYS</h3>
+      </div>
+
+      <div class="col-md-3">
+      <a href='{% url "systems:job" %}' class="btn-style-eight pull-right">Post Graghic job</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock content %}

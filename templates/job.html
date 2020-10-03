@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section style="padding-top: 40px;
+background: #2c47c0 url('../static/kl.jpg') !important;
+background-position: center !important;
+background-repeat: no-repeat !important;
+background-size: cover !important;">
+<div class="covers">
+	<div class="container-fluid">
+		<div class="row">
+		 <div class="col-md-8">
+		 	<div class="wrapjob">
+		 		<h1>Storytelling packaging design</h1>
+		 		<br><br>
+		 		<p>Our Highly creative graphic team designs various attractive logos, Illustrations to suit the company needs of our Patrons.</p>
+		 		<p>We provide insight and technical exparties to each and every one of our customers beccomes our clients partner in achieving competive edge.</p>
+
+		 <h2>How it works, when you hire Us!</h2>
+		 <div class="row">
+		 	<div class="col-md-4">
+		 		<h3>Post your job</h3>
+		 		<h6>Provide your working Email address and phone number and describe what you want to designed in the content section.<br><br>
+		 		You will get feedback in less than 10 minites.
+		 		</h6>
+		 	</div>
+		 	<div class="col-md-4">
+		 		<h3>Payment Method</h3>
+		 		<h6>Before we start work client should pay 40% Via Mpesa or Bank account.</h6>
+		 	</div>
+		 	<div class="col-md-4">
+		 		<h3>Work Delivery</h3>
+		 		<h6>We share with the client the work on Zoom or hangouts meeting.<br/><br>
+		 		If the work is in form of photo eg PNG or JPG we send on client's email or on whats-up.<br/><br>
+
+		 		Or when the work is in form of printing and packaging, we can deliver to the client as a percel.</h6	> 
+		 	</div>
+		 </div>
+		 </div>
+		  </div>
+
+		 <div class="col-md-4">
+		 <br><br/>
+		 <div class="jobform">
+			 <h1>
+			 	<span style="color: yellow;">|</span>
+			 	Post your job here!
+			 </h1>
+				<form method="POST" class="post" action="" enctype="multipart/form-data">{% csrf_token %}
+					{{ form.as_p }}
+				<input type="submit" class="btn btn-default" 
+						value="Post Job">
+				</form>
+			</div>
+		 </div>
+		</div>
+	</div>
+</div>
+</section>
+
+
+{% endblock content %}

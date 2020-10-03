@@ -8,7 +8,6 @@ def upload_location(instance, filename):
 
 class Category(models.Model):
 	name = models.CharField(max_length=250)
-	slug = models.SlugField(max_length=250)
 
 
 	class Meta:
@@ -17,7 +16,7 @@ class Category(models.Model):
 		verbose_name_plural = 'categories'
 
 	def get_category_absolete_url(self):
-		return reverse('systems:list_category',	args=[self.slug])
+		return reverse('systems:list_category',	args=[self.id])
 
 	def __str__(self):
 		return self.name
@@ -26,11 +25,11 @@ class Post(models.Model):
 	category = models.ForeignKey(Category, on_delete=models.CASCADE,
 										related_name="category_set")
 	content = models.TextField()
-	image = models.ImageField(upload_to=upload_location, 
-					null=True, 
-					blank=True,
-					width_field="width_field",
-					height_field="height_field")
+	image = models.ImageField(upload_to="upload_location",
+		null=True,
+		blank=True,
+		width_field="width_field",
+		height_field="height_field")
 	height_field = models.IntegerField(default=0)
 	width_field  = models.IntegerField(default=0)
 	timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
@@ -40,9 +39,7 @@ class Post(models.Model):
 		return self.content
 
 	def get_absolute_url(self):
-		return reverse("systems:show", kwargs={
-			'slug': self.slug
-			})
+		return reverse("systems:show", kwargs={"id": self.id })
 
 class Postjob(models.Model):
 	firstname = models.CharField(max_length=200)

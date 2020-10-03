@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<hr>
+	<div class="show">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-9">
+		<h1>{{ instance.category }}</h1>
+				{% if instance.image %}
+			
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+<img src="{{ instance.image.url }}" class="img-fluid z-depth-1" class="img-responsive" alt="" width="880px" height="400px" /></div>
+  </div>
+</div>
+		{% endif %}
+		<br>
+		<div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></p>
+
+		<div class="content">
+
+		<p>{{ instance.content|linebreaks	}}</p>
+		
+		</div>
+
+		<div class="fb-comments" data-href="{{ request.build_absolute_uri }} data-numposts="5"></div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card1">
+  <img src="../static/be.jpg" alt="John" style="width:100%;">
+  <br><br>
+  <h3><b class="mt-4" style="font-weight: 600; color: #6d0eb1;">Benah Mmojah</b></h3>
+  <hr/>
+  <p class="title" style="font-weight: bold; font-size: 15px;">Photography and Graphic Designing</p>
+  <hr/>
+  <h6 style="font-size: 15px; font-weight: 600;">+254 723 112 843</h6>
+   <hr/>
+  <h2><a href="talha08.github.io" class="button" style="padding: 5px;
+background-color: yellow; font-size: 31px;">@Estatixsystems</a></h2>
+</div>
+
+<div class="col botm-margn ">
+{% for shows in object_list %}
+        <div class="transperent_block " style="background-color:#fff;">
+    <!-- <img src="http://i613.photobucket.com/albums/tt213/boakye51/fw_al_007_03_zpsfwzueotz.jpg" class="img-responsive" alt=""> -->
+  {% if shows.image %}
+		<img src="{{ shows.image.url }}" class="img-responsive" alt="" style="width:100%;">
+	{% endif %}
+
+  <div class="black_hover_block">
+    <div class="blur"></div>
+     	<div class="black_hover_block_text">
+        <ul class="pad0 bg_black">
+        <li class="col-sm-4 float-left pad0"> Touch <span class="fa fa-comments"></span></li>
+       <li class="col-sm-4 pad0 float-left"> of <span class="fa fa-thumbs-o-up"></span></li>
+      <li class="col-sm-4 pad0 float-left"> graphic <span class="fa fa-share-alt"></span></li>
+     <div class="clearfix"></div>
+    </ul>
+      <br/><br/><br/><br/>
+    <!-- <a href='{{ shows.get_absolute_url }}'><h5 class="titl-h5">{{ shows.category }}</h5></a>   -->
+  <h5 class="titl-h5">{{ shows.category }}</h5>
+
+  <a class=" btn btn-default btn-sm btn-pink" href='{{ shows.get_absolute_url }}'>READ MORE</a>                
+	</div>
+ </div>
+ </div>
+{% endfor %}
+</div>
+
+
+</div>
+</div>
+
+</div>
+</div>
+
+{% endblock content %}

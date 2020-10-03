@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% include 'heard.html' %}
+
+<section class="service">
+	<div class="container-fluid">
+	<br/><br/>
+	<h1>Services <br/>& Product List</h1>
+		<div class="row mt-4">
+			<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+				 <a class="btn-floating btn-sm rgba-white-slight mx-1">
+					<i class="fas fa-camera"></i>
+				</a>
+				</div>
+				<div class="col-10 wow fadeInRight" data-wow-duration="6s">
+				<h2>Photography & Vidio Production</h2>
+				<p>Co-operation, Landspace Photography, Medical Camps</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+			<a class="btn-floating btn-sm rgba-white-slight mx-1">
+				<i class="fas fa-print"></i>
+			</a>
+				</div>
+				<div class="col-10">
+				<h2>Digital & Offset Printing Product</h2>
+				<p>Brochures, Poster, Newsletters, Certificates, Handouts
+				Labels, Envelopes, Calenders, Reciept Books, Business cards</p>
+				</div>
+			</div>
+			</div>
+				<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+			 <a class="btn-floating btn-sm rgba-white-slight mx-1">
+				<i class="fas fa-globe"></i>
+			</a>
+				</div>
+				<div class="col-10">
+				<h2>Website Development</h2>
+				<p>Web Design, Web Application, Email Template Marketing</p>
+				</div>
+			</div>
+			</div>
+
+
+			<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+				 <a class="btn-floating btn-sm rgba-white-slight mx-1">
+						<i class="fas fa-print"></i>
+					</a>
+				</div>
+				<div class="col-10">
+				<h2>Digital & Offset Printing Product</h2>
+				<p>Brochures, Poster, Newsletters, Certificates, Handouts
+				Labels, Envelopes, Calenders, Reciept Books, Business cards</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+				 <a class="btn-floating btn-sm rgba-white-slight mx-1">
+					<i class="fas fa-tshirt"></i>
+				</a>
+				</div>
+				<div class="col-10">
+				<h2>T-shits Printing</h2>
+				<p>Vynil Printing, Screen Printing, Transfer Printing</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+				 <a class="btn-floating btn-sm rgba-white-slight mx-1">
+					<i class="fas fa-space-shuttle"></i>
+					</a>
+				</div>
+				<div class="col-10">
+				<h2>Transfer Printing Products</h2>
+				<p>Ceramic Shields, Name Plates, Key Chains</p>
+				</div>
+			</div>
+			</div>
+
+		<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+				<a class="btn-floating btn-sm rgba-white-slight mx-1">
+					<i class="far fa-id-card"></i>
+				</a>
+				</div>
+				<div class="col-10">
+				<h2>Plastic Printing</h2>
+					<p>ID Cards, Access Cards, Visting Cards</p>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+				<a class="btn-floating btn-sm rgba-white-slight mx-1">
+					<i class="fas fa-coffee"></i>
+				</a>
+				</div>
+				<div class="col-10">
+				<h2>Mugs Printing</h2>
+				<p>Magic Mugs, White Mugs, Glow In the Dark Mugs, Enamel Mugs, Frosted Glass Mugs, Beer Mugs</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+				<div class="row">
+				<div class="col-2">
+				 <a class="btn-floating btn-sm rgba-white-slight mx-1">
+					<i class="fas fa-expand-arrows-alt"></i>
+				</a>
+				</div>
+				<div class="col-10">
+				<h2>Large Format Printing</h2>
+				<p>Roll up Banner, Canvas Printing, Sticker Printing</p>
+				</div>
+			</div>
+			</div>			
+
+		</div>
+	</div>
+</section>
+
+<div class="job">
+	<div class="back12">
+		<div class="row">
+		<div class="col-md-6">
+		<!-- <img src="../static/hv.jpg"> -->
+
+		</div>
+
+		<div class="col-md-6">
+			<br><br>
+			<h1>Post Your Graghic Job to <br/>creative
+			specialists</h1>
+			<br><br><br><br>
+			 <a href='{% url "systems:job" %}' class="btn-style-eight pull-right">Post Your Graghic Job </a>
+		</div>
+
+	
+	</div>
+	</div>
+</div>
+	
+{% endblock content %}
