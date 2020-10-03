@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% include "heard.html" %}
+<section class="posts">
+<h3><a href='{% url "systems:work" %}' class="btn-style-eightw pull-right">View more</a></h3>
+<div class="container-fluid">
+<h1>Latest Work</h1>
+<br/>
+<div class="row row-cols-1 row-cols-md-3">
+  {% for obj in object_list %}
+
+  <div class="col-sm-6 col-md-3">
+
+    <!-- Card -->
+      <a href='{{ obj.get_absolute_url }}' class="badge badge-danger" style="font-size: 1.2em; 
+     font-family: Yeseva One; padding: 10px; width: 310px; ">{{ obj.category }}</a>
+
+    <div class="wp-sty">
+      <div class="view overlay">
+      {% if obj.image %}
+
+        <img class="card-img-top" src="{{ obj.image.url }}"
+          class="img-fluid z-depth-1" class="img-responsive" alt="">
+            {% endif %}
+        <a href='{{ obj.get_absolute_url }}'>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+</div>
+  </div>
+    {% endfor %}
+
+</div>
+
+</section>
+
+{% endblock content %}

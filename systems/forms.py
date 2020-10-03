@@ -1,10 +1,10 @@
 from django import forms
-from django import Category, Post, Postjob, Contact
+from .models import Category, Post, Postjob, Contact
 
 
-class PostForm(forms.modeForm):
-	content = forms.CharField(widget=forms.TextInput(attrs={
-		'class' : 'form-control'
+class PostForm(forms.ModelForm):
+	content = forms.CharField(widget=forms.Textarea(attrs={
+		'class': 'form-control'
 		}))
 
 	class Meta:
@@ -15,7 +15,7 @@ class PostForm(forms.modeForm):
 			"image",
 		]
 		
-class PostjobForm(forms.modelForm):
+class PostjobForm(forms.ModelForm):
 	firstname = forms.CharField(widget=forms.TextInput(attrs={
 		'class' : 'form-control'
 		}))
@@ -25,7 +25,7 @@ class PostjobForm(forms.modelForm):
 	email = forms.CharField(widget=forms.TextInput(attrs={
 		'class' : 'form-control'
 		}))
-	company = form.CharField(widget=forms.TextInput(attrs={
+	company = forms.CharField(widget=forms.TextInput(attrs={
 		'class' : 'form-control'
 		}))
 

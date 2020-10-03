@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 {% block content %}
 
@@ -35,7 +36,7 @@
     <div class="text-box">
             <div class="row align-items-center">
             <div class="col-md-6  wow slideInRight" data-wow-duration="4s">
-                <h2>Digital & Offset Printing Product</h2>
+                <h2>Digital & Offset <span>Printing Product</span> </h2>
             <p>Brochures, Poster, Newsletters, Certifficates, Handouts</p>
             </div>
             <div class="col-md-6  wow slideInLeft" data-wow-duration="4s">
@@ -49,7 +50,7 @@
     <div class="text-box">
       <div class="row align-items-center">
           <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
-            <h2>Photography and Vidio Production</h2>
+            <h2><span>Photography</span> and Vidio Production</h2>
             <p>Co-oprate Events, Landspace Photography<br/>
             Medical Camps</p>
             </div>
@@ -62,11 +63,109 @@
     </div>
   </div>
 
+</div>
+  <section class="services">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-lg-3 col-xl-3">
+       <i class="fas fa-drafting-compass mb-4"></i>
+        <h1>Mission</h1>
+          <p>Our mission is provide you with the heighest quality products and services possible in a timely fashion and at a competitive price.</p>
+          <a href="{% url 'systems:about' %}">Read More</a>
+      </div>
 
+
+      <div class="col-md-4">
+      
+      <i class="far fa-edit mb-4 col-lg-3 col-xl-3"></i>
+        <h1>Vission</h1>
+          <p>Estatix Systems goals is to become one of the most important players in the industrial digital printing market.</p>
+          <a href="{% url 'systems:about' %}">Read More</a>
+
+      </div>
+      
+      <div class="col-md-4 col-lg-3 col-xl-3">
+      <i class="far fa-lightbulb mb-4"></i>
+        <h1>Objectives</h1>
+          <p>Estatix System objectives is to a primary resource for printing, repudiation, design and finishing to ensure all production.</p>
+        <a href="{% url 'systems:about' %}">Read More</a>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<section class="posts z-depth-1-half">
+<h3><a href='{% url "systems:work" %}' class="btn-style-eightw pull-right">View more</a></h3>
+<div class="container-fluid">
+<h1>Latest Work</h1>
+<br/>
+<div class="row row-cols-1 row-cols-md-3 wow fadeInLeft" data-wow-duration="6s">
+  {% for obj in object_list %}
+
+  <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+
+    <!-- Card -->
+      <a href='{{ obj.get_absolute_url }}' class="badge badge-danger" style="font-size: 1.2em; 
+     font-family: Yeseva One; padding: 10px; width: 310px; ">{{ obj.category }}</a>
+
+    <div class="wp-sty z-depth-1-half">
+      <div class="view overlay">
+      {% if obj.image %}
+
+        <img class="card-img-top" src="{{ obj.image.url }}"
+          class="img-fluid z-depth-1" class="img-responsive z-depth-1-half"  alt="">
+            {% endif %}
+        <a href='{{ obj.get_absolute_url }}'>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
 
 </div>
-    
+  </div>
+    {% endfor %}
+
+</div>
+</div>
 </section>
+
+<section class="value">
+<div class="mu">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 wow fadeInUp" data-wow-duration="8s">
+      <h2>OUR VALUES</h2>
+      <h3>We help Startups & big companies to brand their business</h3>
+      <br><br>
+         <a href='{% url "systems:job" %}' class="btn-style-eight pull-right">Post Your Graghic Job </a>
+      </div>
+      <div class="col-md-3">
+      <i class="fab fa-autoprefixer"></i>
+        <h1>Innovation</h1>
+        <p>Always looking out for new and better ways of working</p>
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h1>Customer Focused</h1>
+        <p>Offering solution for their needs and challenges</p>
+      </div>
+      <div class="col-md-5">
+      <i class="fas fa-wifi"></i>
+      <h1>Integrity</h1>
+      <p>Efficiency in how use resources to delivery on our role</p>
+      <i class="far fa-edit"></i>
+      <h1>Quality</h1>
+      <p>From our products, branding, photography and customer services</p>
+      <i class="fab fa-teamspeak"></i>
+      <h1>Team work</h1>
+      <p>We all work seamlessly to ensure our clients are happy</p>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+  
+{% include "logo.html" %}
+
 <script type="text/javascript">
 	   wow = new WOW(
       {
