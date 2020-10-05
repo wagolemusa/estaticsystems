@@ -25,7 +25,7 @@ SECRET_KEY = '(i-(lf3&9j%mewe*t!&hd%8@&wvk0=i0#h@)cl(ax$e%s=1u1i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wagole.pythonanywhere.com']
+ALLOWED_HOSTS = ['wagole.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
