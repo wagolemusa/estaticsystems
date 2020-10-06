@@ -1,6 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
+ <section class="services mt-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-xl-4">
+       <i class="fas fa-drafting-compass mb-4"></i>
+        <h1>Mission</h1>
+          <p>Our mission is provide you with the heighest quality products and services possible in a timely fashion and at a competitive price.</p>
+          <a href="{% url 'systems:about' %}">Read More</a>
+      </div>
+
+
+      <div class="col-md-4 col-lg-4 col-xl-4">
+      
+      <i class="far fa-edit mb-4"></i>
+        <h1>Vission</h1>
+          <p>Estatix Systems goals is to become one of the most important players in the industrial digital printing market.</p>
+          <a href="{% url 'systems:about' %}">Read More</a>
+
+      </div>
+      
+      <div class="col-md-4 col-lg-4 col-xl-4">
+      <i class="far fa-lightbulb mb-4"></i>
+        <h1>Objectives</h1>
+          <p>Estatix System objectives is to a primary resource for printing, repudiation, design and finishing to ensure all production.</p>
+        <a href="{% url 'systems:about' %}">Read More</a>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
 <section class=" developers_layout my-5">
 	<div class="dev">
 	<div class="container-fluid"">
